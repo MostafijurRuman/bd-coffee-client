@@ -66,18 +66,20 @@ const CoffeeCard = ({ coffee }) => {
 
             {/* Action Icons */}
             <div className="flex flex-col gap-2 ml-4">
-                <button
+                <Link to={`/coffees/${coffee._id}`}
                     aria-label="View"
                     className="bg-[#D2B48C] hover:bg-[#bfa06e] p-2 rounded text-white text-xl transition cursor-pointer"
                 >
                     <FaEye />
-                </button>
+                </Link>
+                <Link to={`/coffees/${coffee._id}/edit`}>
                 <button
                     aria-label="Edit"
                     className="bg-[#3C393B] hover:bg-[#1B1A1A] p-2 rounded text-white text-xl transition cursor-pointer"
                 >
                     <FaEdit />
                 </button>
+                </Link>
                 <button
                     onClick={() => handleDelete(coffee._id)}
                     aria-label="Delete"

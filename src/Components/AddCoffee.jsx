@@ -1,7 +1,7 @@
 // AddCoffeeForm.jsx
 import { Link } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
-import { useState } from "react";
+import Swal from 'sweetalert2'
 
 const AddCoffee = () => {
     const handleSubmit = (e) => {
@@ -34,7 +34,13 @@ const AddCoffee = () => {
         .then(data => {
             console.log(data)
             if(data.insertedId){
-                alert(`${newCoffee.name} Added in Our Store`)
+                Swal.fire({
+                            title: `${newCoffee.name} Successfully Added`,
+                            icon: "success",
+                            draggable: true
+                            });
+
+                            form.reset();
             }
         });
     };
