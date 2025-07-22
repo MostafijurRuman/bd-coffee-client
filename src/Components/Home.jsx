@@ -1,6 +1,7 @@
 // Hero.jsx
-import { FaMugHot, FaMedal, FaSeedling, FaFireAlt } from "react-icons/fa";
+import { FaMugHot, FaMedal, FaSeedling, FaFireAlt, FaCoffee  } from "react-icons/fa";
 import Herobg from '../../public/coffee-hero.png'
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -66,6 +67,18 @@ const Hero = () => {
           </p>
         </div>
       </div>
+
+      {/* sip & savor section Start */}
+      <div>
+        <h4 className="text-center raleway text-[20px] mt-28">--- Sip & Savor ---</h4>
+        <h1 className="text-[#331A15] text-center text-[55px] rancho">Our Popular Products</h1>
+        <Link to={'/add-coffee'} className="flex justify-center mt-6">
+        <button className="w-[180px] h-[48px] border border-[#331A15] bg-[#E3B577] hover:bg-white hover:text-[#E3B577] rounded-[5px]  rancho text-xl text-white flex items-center justify-between px-4">Add Coffee <span><FaCoffee /></span> </button>
+        </Link>
+      </div>
+
+      {/* sip & savor section End */}
+      
     </div>
   );
 };

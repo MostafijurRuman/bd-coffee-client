@@ -8,6 +8,7 @@ import './index.css'
 import App from './App.jsx'
 import MainLayout from './Components/MainLayout.jsx';
 import Home from './Components/Home.jsx';
+import AddCoffee from './Components/AddCoffee.jsx';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/add-coffee",
+        element: <AddCoffee></AddCoffee>,
       },
     ],
   },
