@@ -1,15 +1,20 @@
-// Hero.jsx
-import { FaMugHot, FaMedal, FaSeedling, FaFireAlt, FaCoffee  } from "react-icons/fa";
-import Herobg from '../../public/coffee-hero.png'
+import {
+  FaMugHot,
+  FaMedal,
+  FaSeedling,
+  FaFireAlt,
+  FaCoffee,
+} from "react-icons/fa";
 import { Link } from "react-router-dom";
+import CoffeeCardSection from "./CoffeeCards";
 
-const Hero = () => {
+const Home = () => {
   return (
     <div>
       {/* Hero Image Section */}
       <div className="relative">
         <img
-          src={Herobg}
+          src='coffee-hero.png'
           alt="Coffee Cup with Beans"
           className="md:w-full md:h-[650px] h-[389px] object-cover"
         />
@@ -39,7 +44,6 @@ const Hero = () => {
             You will definitely be a fan of the design & aroma of your coffee.
           </p>
         </div>
-
         {/* Feature 2 */}
         <div className="space-y-2">
           <FaMedal className="text-4xl text-[#331A15] mx-auto" />
@@ -48,7 +52,6 @@ const Hero = () => {
             We served the coffee to you maintaining the best quality.
           </p>
         </div>
-
         {/* Feature 3 */}
         <div className="space-y-2">
           <FaSeedling className="text-4xl text-[#331A15] mx-auto" />
@@ -57,7 +60,6 @@ const Hero = () => {
             The coffee is made of the green coffee beans which you will love.
           </p>
         </div>
-
         {/* Feature 4 */}
         <div className="space-y-2">
           <FaFireAlt className="text-4xl text-[#331A15] mx-auto" />
@@ -68,19 +70,31 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* sip & savor section Start */}
+      {/* Sip & Savor section Start */}
       <div>
-        <h4 className="text-center raleway text-[20px] mt-28">--- Sip & Savor ---</h4>
-        <h1 className="text-[#331A15] text-center text-[55px] rancho">Our Popular Products</h1>
-        <Link to={'/add-coffee'} className="flex justify-center mt-6">
-        <button className="w-[180px] h-[48px] border border-[#331A15] bg-[#E3B577] hover:bg-white hover:text-[#E3B577] rounded-[5px]  rancho text-xl text-white flex items-center justify-between px-4">Add Coffee <span><FaCoffee /></span> </button>
+        <h4 className="text-center raleway text-[20px] mt-28">
+          --- Sip & Savor ---
+        </h4>
+        <h1 className="text-[#331A15] text-center text-[55px] rancho">
+          Our Popular Products
+        </h1>
+        <Link to={"/add-coffee"} className="flex justify-center mt-6">
+          <button className="w-[180px] h-[48px] border border-[#331A15] bg-[#E3B577] hover:bg-white hover:text-[#E3B577] rounded-[5px] rancho text-xl text-white flex items-center justify-between px-4">
+            Add Coffee{" "}
+            <span>
+              <FaCoffee />
+            </span>
+          </button>
         </Link>
       </div>
 
-      {/* sip & savor section End */}
-      
+      {/* Coffee Cards Section */}
+      <div className="mt-12 mb-24">
+        <CoffeeCardSection />
+      </div>
+      {/* Sip & Savor section End */}
     </div>
   );
 };
 
-export default Hero;
+export default Home;

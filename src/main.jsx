@@ -9,6 +9,7 @@ import App from './App.jsx'
 import MainLayout from './Components/MainLayout.jsx';
 import Home from './Components/Home.jsx';
 import AddCoffee from './Components/AddCoffee.jsx';
+import CoffeeDetails from './Components/CoffeeDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,11 @@ const router = createBrowserRouter([
       {
         path: "/add-coffee",
         element: <AddCoffee></AddCoffee>,
+      },
+      {
+        path: "/coffees/:id",
+        element:<CoffeeDetails></CoffeeDetails>,
+        loader:({params})=> fetch(`http://localhost:5000/coffees/${params.id}`)
       },
     ],
   },
