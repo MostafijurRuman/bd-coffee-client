@@ -25,7 +25,7 @@ const AddCoffee = () => {
             photo,
         };
         console.log(newCoffee);
-        fetch('http://localhost:5000/coffees', {
+        fetch('https://bd-coffee-server.vercel.app/coffees', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newCoffee)

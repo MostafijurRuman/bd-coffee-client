@@ -15,7 +15,7 @@ function handleUpdate(e,id) {
         photo: form.photo.value,
     };
     
-    fetch(`http://localhost:5000/coffees/${id}`, {
+    fetch(`https://bd-coffee-server.vercel.app/coffees/${id}`, {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(updateCoffee)

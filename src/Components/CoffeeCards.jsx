@@ -22,7 +22,7 @@ const CoffeeCard = ({ coffee }) => {
             icon: "success"
         });
         try {
-            const res = await fetch(`http://localhost:5000/coffees/${id}`, {
+            const res = await fetch(`https://bd-coffee-server.vercel.app/coffees/${id}`, {
                 method: "DELETE",
             });
             if (res.ok) {
@@ -98,7 +98,7 @@ const CoffeeCardSection = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/coffees")
+    fetch("https://bd-coffee-server.vercel.app/coffees")
       .then((res) => res.json())
       .then((data) => {
         setCoffees(data);
